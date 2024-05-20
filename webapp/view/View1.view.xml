@@ -1,0 +1,67 @@
+<mvc:View controllerName="com.sample.ZSVoiceRecord.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" class="sapuiSizeCompact">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<f:SimpleForm id="SimpleFormDisplay354wideDual" editable="true" layout="ResponsiveGridLayout" title="Data-Form" labelSpanXL="4"
+							labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="1" emptySpanM="0" emptySpanS="0"
+							columnsXL="2" columnsL="2" columnsM="1" singleContainerFullSize="false" class="sapuiSizeCompact">
+							<f:content>
+								<core:Title text="Personal Details"/>
+								<Label text="Full name"/>
+								<Input id="nameText" value="" enabled="true" tooltip="Enter your full name" placeholder="Full Name"/>
+								<Button icon="sap-icon://microphone" text="" width="10PX" press="onNameRecording" tooltip="Say your full name"></Button>
+								
+								<Label text="Email"/>
+								<Input id="nameEmail" value="" enabled="true" tooltip="Enter your Email ID" placeholder="Example@sap.com"/>
+								<Button icon="sap-icon://microphone" text="" width="10PX" press="onNameRecording" tooltip="Say your Email ID"></Button>
+								
+								<Label text="Date Of Birth"/>
+								<Input id="dobText" value="" enabled="true" placeholder="EX:01-01-1990" tooltip="{i18n>dateofbirth_tooltip}"/>
+								<HBox>
+									<Button icon="sap-icon://microphone" text="" width="10PX" press="onNameRecording" tooltip="{i18n>dateofbirth_tooltip}"></Button>
+									<Button icon="sap-icon://information" width="5%" press="dobInformation" tooltip="{i18n>dateofbirth_tooltip}"/>
+								</HBox>
+								
+								<Label text="City"/>
+								<Input id="nameCity" value="" enabled="true" tooltip="Enter your City" placeholder="City"/>
+								<Button icon="sap-icon://microphone" text="" width="10PX" press="onNameRecording" tooltip="Say your City"></Button>
+								
+								<Label text="ZipCode"/>
+								<Input id="nameZipcode" value="" enabled="true" tooltip="Enter Your ZipCode" placeholder="ZipCode" />
+								<Button icon="sap-icon://microphone" text="" width="10PX" press="onNameRecording" tooltip="Say Your ZipCode"></Button>
+								
+								<Label text="Region"/>
+								<Input id="nameRegion" value="" enabled="true" tooltip="Enter Your Region Name" placeholder="EMEA, APJ, LAC, NA"/>
+								<Button icon="sap-icon://microphone" text="" width="10PX" press="onNameRecording" tooltip="Say Your Region Name"></Button>
+								
+								<Label text="Country where the contact is located"/>
+								<Input id="nameCountry" value="" enabled="true" tooltip="Enter Your Country Name" placeholder="Country" />
+								<Button icon="sap-icon://microphone" text="" width="10PX" press="onNameRecording" tooltip="Say Your Country Name"></Button>
+								
+								<core:Title text="Online"/>
+								<Label text="Web page of the contact"/>
+								<Input value="" id="nameWebpage"/>
+								<Button icon="sap-icon://microphone" text="" width="10PX" press="onNameRecording"></Button>
+								
+								<Label text="Twitter account of the contact"/>
+								<Input value="" id="nameTwitter" />
+								<Button icon="sap-icon://microphone" text="" width="10PX" press="onNameRecording"></Button>
+							</f:content>
+						</f:SimpleForm>
+						<Toolbar>
+							
+							<Button id="idClear" text="Clear" type="Emphasized" press="onClear" tooltip="{i18n>clearButton_tooltip}"/>
+							<Button id="idClearMic" icon="sap-icon://microphone" text="" press="onNameRecording" tooltip="Please Say Clear"></Button>
+							<ToolbarSpacer></ToolbarSpacer>
+							<Button id="idSubmit" text="Submit" type="Emphasized" press="onSubmit" tooltip="{i18n>submitButton_tooltip}" enabled="false"/>
+							<Button id="idSubmitMic" icon="sap-icon://microphone" text="" press="onNameRecording" tooltip="Please Say Submit" enabled="false" />
+						</Toolbar>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
